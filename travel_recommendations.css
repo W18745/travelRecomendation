@@ -150,3 +150,45 @@ nav {
     font-weight: bold;
     font-size: x-large
   }
+  .Contact_List{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    justify-content: space-between;
+    padding: 0px;
+    margin: 0px;
+    max-width: 90%;
+  }
+  .contact_form{
+    background-color: rgba(0, 0, 0,0.33);
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75ch;
+  }
+  .contact_form label{
+    width: 100%;
+  }
+
+  .contact_form input{
+    border: 0;
+    border-radius: 15px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.25);
+  }
+  .contact_form input[type="textarea"]{
+    height: 30ch;
+    width: 100%;
+    border: 0;
+    border-radius: 15px;
+    text-align: left;
+  }
+  .contact_form button{
+    border: 0;
+    border-radius: 15px;
+    color: green;
+    width: 10ch;
+  }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Travel Recommendations</title>
+        <link rel="stylesheet" href="./travel_recommendations.css">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><img class="logo" src="./Logo.png" id="logo" alt="Company Logo"></li>
+                <li><p class = "Company_Text">Travel Pro</li>
+            </ul>
+            <ul class="Nav_Buttons">  
+                <li><a href="./travel_recommendation.html" id="home">Home</a></li>
+                <li><a href="./about.html" id="about">About</a></li>
+                <li><a href="./contact.html" id="contact">Contact Us</a></li>
+            </ul>
+            <form class="Hidden_Search_Form" >
+                <input id="search_input" type="text" placeholder="Enter a Destination or Keyword">
+                <p >🔍</p>
+                <button type="submit">Search</button>
+                <button type="Reset">Reset</button>
+            </form>
+        </nav>
+        <div class="Headline">
+            <ul class="Contact_List">
+                <li>
+                    <h1 >Contact Us</h1>
+                    <p>
+                        Get In touch
+                    </p>
+                </li>
+                <li>
+                    <form class="contact_form">
+                        <label for="contact_name">Name:</label>
+                        <input type="text" id="contact_name" name="contact_name">
+                        <label for="contact_email">Email:</label>
+                        <input type="text" id="contact_email" name="contact_email">
+                        <label for="contact_message">Message:</label>
+                        <input type="textarea" id="contact_message" name="contact_message">
+                        <button type="submit" id="contact_submit" name = "contact_submit">Submit</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
