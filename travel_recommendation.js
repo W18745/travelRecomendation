@@ -42,7 +42,8 @@ function peformSearch(){
                         result.classList.add("Search_Result");
                         result.innerHTML=`<img src="${e2["imageUrl"]}">
                         <h2>${e2["name"]}</h1>
-                        <p>${e2["description"]}</p>`
+                        <p>${e2["description"]}</p>
+                        <p>Current Time: ${new Date().toLocaleTimeString('en-US',{timeZone: e2["timezone"], hour12: true, hour: 'numeric', minute: 'numeric', second: 'numeric' })}`
                         mainList.appendChild(result);
                     })
 
