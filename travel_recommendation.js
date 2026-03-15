@@ -27,16 +27,34 @@ function peformSearch(){
       .then(data => {
         console.log(`Looking for: ${searchText} in:`);
         console.log(data[searchText]);
-        mainSection.innerHTML = `<h1 class="headline">Search Results</h1`
+        mainSection.innerHTML = `<h1>Search Results</h1`
+        mainSection.classList.toggle("Headline")
+        mainSection.classList.toggle("Search")
         //Results found
         if (data[searchText]){
             const mainList = document.createElement("ul");
-            mainList.classList.add("Search_REsult_List");
+            mainList.classList.add("Search_Result_List");
 
             data[searchText].forEach(e => {
-                const result = document.createElement("li");
-                result.classList.add("Search_Result");
-                mainList.appendChild(result);
+                if (searchText === "countries"){
+                    e["cities"].forEach(e2 =>{
+                        const result = document.createElement("li");
+                        result.classList.add("Search_Result");
+                        result.innerHTML=`<img src="${e2["imageUrl"]}">
+                        <h2>${e2["name"]}</h1>
+                        <p>${e2["description"]}</p>`
+                        mainList.appendChild(result);
+                    })
+
+                }
+                else{
+                    const result = document.createElement("li");
+                    result.classList.add("Search_Result");
+                    result.innerHTML=`<img src="${e["imageUrl"]}">
+                    <h2>${e["name"]}</h1>
+                    <p>${e["description"]}</p>`
+                    mainList.appendChild(result);
+                }
             });
             mainSection.appendChild(mainList);
         }
@@ -51,4 +69,16 @@ function peformSearch(){
         console.error('Error:', error);
       });
 }
+function peformSearchReset(){
+    mainSection.innerHTML=`<h1>Travel your Way</h1>
+    <p>
+        Welcome to Travel Pro, were your one stop to finding beautiful vacation getaways, exploration, celebrations and manny more.
+        Please use our services to explore getaway locations and plan you travels
+    </p>`
+    mainSection.classList.add("Headline");
+    mainSection.classList.remove("Search")
+    
+}
+
 searchSubmit.addEventListener('click', peformSearch);
+searchClear.addEventListener('click', peformSearchReset);

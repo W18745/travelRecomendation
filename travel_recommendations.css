@@ -192,3 +192,31 @@ nav {
     color: green;
     width: 10ch;
   }
+  .Search_Result_List{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 20px;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    margin: 10px;
+    padding: 0;
+  }
+  .Search{
+    color: whitesmoke;
+    font-weight: bold;
+    margin-left: 5px;
+  }
+  .Search_Result{
+    background-color: rgba(0, 0, 0,0.33);
+    border-radius: 15px;
+    margin: 10px;
+    color: whitesmoke;
+    height: 90%;
+  }
+  .Search_Result img{
+    height: auto;
+    max-height: 50%;
+    width: 100%;
+    border-radius: 15px;
+  }
