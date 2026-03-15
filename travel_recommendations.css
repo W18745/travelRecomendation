@@ -1,5 +1,5 @@
 nav {
-    background-color: rgb(66, 37, 94);
+    background-color: rgba(66, 37, 94,0.75);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -40,8 +40,13 @@ nav {
   }
   
   body{
-    margin: 0px;
-    background-image: none;
+    background-image: url("./background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
   }
   .logo{
     height: 50px;
@@ -62,6 +67,10 @@ nav {
     background-color: white;
     border-radius: 30px;
     padding: 10px;
+    margin-right: 5px;
+  }
+  .Hidden_Search_Form{
+    visibility: hidden;
   }
   .Search_Form p{
     margin: 0px;
@@ -77,4 +86,67 @@ nav {
     border: 0px;
     outline: 0px;
   }
-    
+  .Search_Form button{
+    background-color: rgb(139, 93, 182);
+    margin-left: 2px;
+    color: whitesmoke;
+    border-radius: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .Headline{
+    color: whitesmoke;
+    margin: 0px;
+    margin-top: 20%;
+    margin-left: 10%;
+  }
+  .Headline h1{
+    font-size: 50px;
+    font-weight: bold;
+  }
+  .Headline p{
+    width: 50%;
+    background-color: rgba(0, 0, 0,0.33);
+    border-radius: 25px;
+    padding: 10px;
+    margin-bottom: 40px;
+  }
+  .Our_Team_List{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    justify-content: space-between;
+    max-height: 100px;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    max-width: 80%;
+  }
+  .Our_Team_List li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    justify-content: center;
+    max-height: 100px;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+  }
+
+  .Our_Team_List li img{
+    height: 50px;
+    width: 50px;
+    align-items: center;
+    display: block;
+    border-radius: 10px;
+  }
+  .description_text{
+    font-size: smaller;
+  }
+  .name_text{
+    font-weight: bold;
+    font-size: x-large
+  }
