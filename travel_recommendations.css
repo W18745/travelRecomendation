@@ -1,13 +1,15 @@
 nav {
-    background-color: #c0ccc3;
+    background-color: rgb(66, 37, 94);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    max-height: 50px;
+    flex-basis: content;
     padding: 5px;
     border-radius: 50px;
     margin: 20px;
+    white-space: nowrap;
+    min-width: fit-content;
   }
   nav ul{
     display: flex;
@@ -16,6 +18,12 @@ nav {
     list-style: none;
     justify-content: space-between;
     max-height: 50px;
+    padding: 0px;
+    margin: 0px;
+  }
+  nav ul li{
+    margin-left: 10px;
+    margin-right: 10px;
   }
   
   nav form{
@@ -25,13 +33,48 @@ nav {
     list-style: none;
   }
   .Company_Text{
-    font-size: 50px;
+    font-size: 43.5px;
+    margin: 0px;
+    white-space: nowrap;
+    color: whitesmoke;
   }
   
   body{
     margin: 0px;
+    background-image: none;
   }
   .logo{
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
+    align-items: center;
+    display: block;
+    border-radius: 10px;
   }
+  .Nav_Buttons{
+    font-size: 30px;
+    
+  }
+  .Nav_Buttons li a{
+    color: whitesmoke;
+    text-decoration: none;
+  }
+  .Search_Form{
+    background-color: white;
+    border-radius: 30px;
+    padding: 10px;
+  }
+  .Search_Form p{
+    margin: 0px;
+  }
+  .Search_Form input{
+    color: black;
+    border: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 200px;
+  }
+  .Search_Form input:focus{
+    border: 0px;
+    outline: 0px;
+  }
+    
